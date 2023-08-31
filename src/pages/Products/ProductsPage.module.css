@@ -1,0 +1,26 @@
+.container {
+  padding: 1rem;
+
+  & .search_input {
+    padding: 0.3rem 0.5rem;
+    outline: none;
+    border: 1px solid lightgray;
+    margin-top: 0.5rem;
+    width: 30%;
+  }
+
+  & .action {
+    display: flex;
+    justify-content: space-between;
+
+    & .new_product {
+      text-decoration: none;
+      align-self: center;
+      padding: 0.3rem 0.6rem;
+      border-radius: 5px;
+      border: none;
+      background-color: #1f263e;
+      color: #fff;
+    }
+  }
+}

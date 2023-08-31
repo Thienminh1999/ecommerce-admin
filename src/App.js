@@ -1,24 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  Navigate,
+  RouterProvider,
+  createBrowserRouter,
+} from "react-router-dom";
+import "./App.css";
+import MainLayout from "./layout/MainLayout/MainLayout";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import ProductsPage from "./pages/Products/ProductsPage";
+import LoginPage from "./pages/Login/LoginPage";
+import { SnackbarProvider } from "notistack";
+import { loader as infoBoardLoader } from "./pages/Dashboard/Dashboard";
+import { loader as productDetailsLoader } from "./pages/UpdateProduct/UpdateProductPage";
+import CreateProductPage from "./pages/CreateProduct/CreateProductPage";
+import ChatPage from "./pages/ChatPage/ChatPage";
+import UpdateProductPage from "./pages/UpdateProduct/UpdateProductPage";
+import ErrorPage from "./pages/ErrorPage/ErrorPage";
+
+const routes = createBrowserRouter([
+  {
+    path: "/",
+    element: <MainLayout />,
+    errorElement: <ErrorPage />,
+    children: [
+      { index: true, element: <Navigate to="/login" replace /> },
+      { path: "dashboard", element: <Dashboard />, loader: infoBoardLoader },
+      { path: "products", element: <ProductsPage /> },
+      {
+        path: "products/create",
+        element: <CreateProductPage />,
+      },
+      {
+        path: "products/update/:productId",
+        element: <UpdateProductPage />,
+        loader: productDetailsLoader,
+      },
+      {
+        path: "chat",
+        element: <ChatPage />,
+      },
+    ],
+  },
+  { path: "/login", element: <LoginPage /> },
+]);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <SnackbarProvider>
+      <RouterProvider router={routes} />
+    </SnackbarProvider>
   );
 }
 

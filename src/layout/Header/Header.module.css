@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+
+  & button {
+    align-self: center;
+    border: none;
+    background-color: lightgray;
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+}

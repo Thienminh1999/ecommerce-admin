@@ -1,0 +1,52 @@
+.container {
+  width: 70%;
+  padding: 1rem;
+  background-color: #f1f8ff;
+  margin-top: 1rem;
+  margin-inline: auto;
+
+  & .errors {
+    list-style-type: none;
+    color: red;
+  }
+
+  & button {
+    padding: 0.5rem;
+    background-color: #5f76e8;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+  }
+}
+
+.form_controller {
+  display: grid;
+  margin-block: 0.5rem;
+
+  & label {
+    margin-bottom: 0.5rem;
+    opacity: 0.7;
+  }
+
+  & input,
+  & textarea {
+    padding: 0.5rem;
+    outline: none;
+    border: 1px solid lightgray;
+  }
+
+  & input[type="file"] {
+    padding: 0.3rem;
+    outline: none;
+    border: none;
+  }
+
+  & .images {
+    display: flex;
+    justify-content: space-around;
+
+    & img {
+      width: 20%;
+    }
+  }
+}

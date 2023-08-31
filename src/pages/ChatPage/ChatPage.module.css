@@ -1,0 +1,9 @@
+.container {
+  padding: 1rem;
+  & .chat_panel {
+    border: 1px solid gray;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    margin-top: 1rem;
+  }
+}

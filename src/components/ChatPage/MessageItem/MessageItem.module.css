@@ -1,0 +1,38 @@
+.container {
+  padding-inline: 1rem;
+
+  & .end {
+    width: 100%;
+    text-align: center;
+  }
+
+  & .staff p,
+  & .client p {
+    padding: 0.5rem 1rem;
+    margin-block: 0.5rem;
+    width: fit-content;
+    border-radius: 5px;
+  }
+
+  & .staff {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    & p {
+      background-color: #48b0f7;
+    }
+  }
+
+  & .client {
+    display: flex;
+    align-items: center;
+
+    & i {
+      margin-right: 1rem;
+    }
+
+    & p {
+      background-color: #f2f2f2;
+    }
+  }
+}

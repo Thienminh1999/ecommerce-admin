@@ -1,0 +1,31 @@
+.container {
+  height: 100%;
+  position: relative;
+
+  & .prompt {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3rem;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 1rem;
+    border-top: 1px solid lightgray;
+
+    & input {
+      border: none;
+      background-color: #f9fbfd;
+      outline: none;
+    }
+
+    & button {
+      padding: 0.5rem;
+      border-radius: 25px;
+      border: none;
+      background-color: #01caf1;
+      color: #fff;
+    }
+  }
+}

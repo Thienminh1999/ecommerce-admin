@@ -1,0 +1,41 @@
+.container {
+  border-bottom: 1px solid #f2f2f2;
+
+  & .wrapper {
+    height: auto;
+    padding-block: 1rem;
+
+    & img {
+      width: 5rem;
+    }
+  }
+
+  & td {
+    text-align: center;
+    padding-block: 0.5rem;
+    border: 1px solid lightgray;
+    text-transform: capitalize;
+    padding-inline: 0.6rem;
+
+    & h4 {
+      font-weight: 500;
+    }
+  }
+
+  & .actions {
+    & .btns {
+      display: inline-flex;
+      align-items: center;
+
+      & button {
+        border: none;
+        color: #fff;
+        padding: 0.3rem;
+      }
+
+      & .green {
+        background-color: #22ca80;
+      }
+    }
+  }
+}

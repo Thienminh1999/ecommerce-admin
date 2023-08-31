@@ -1,0 +1,24 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 3rem;
+  background-color: #fff;
+
+  & .info_card {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+    align-items: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    & p {
+      color: gray;
+      text-transform: capitalize;
+    }
+
+    & sup {
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.container {
+  padding: 1rem;
+  background-color: #f9fbfd;
+
+  & .card {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+}

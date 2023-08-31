@@ -1,0 +1,33 @@
+.container {
+  border-right: 1px solid lightgray;
+  height: 90vh;
+
+  & p {
+    margin-inline: 1rem;
+  }
+
+  & input {
+    margin: 1rem;
+    padding: 0.5rem;
+    border: 1px solid lightgray;
+    outline: none;
+  }
+
+  & .list {
+    list-style-type: none;
+    border-top: 1px solid lightgray;
+
+    & .room_chat {
+      padding: 0.5rem;
+
+      & i {
+        margin-right: 0.5rem;
+      }
+
+      &:hover {
+        background-color: #7e8dc2;
+        cursor: pointer;
+      }
+    }
+  }
+}
